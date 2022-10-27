@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+
+{% block tital %}About Us{% endblock tital %} 
+
+{% block body %} 
+
+{% endblock body %}
+<div class="row">
+    {% if country_code and coordinates and temp and pressure and humidity %}
+    <div class="col d-flex justify-contact-center">
+      <div class="card text-white bg-light mb-6">
+        <div class="card-body">
+          <h4><span class="badge badge-primary">City Name :</span>{{city_name}}</h4>
+          <h4><span class="badge badge-primary">City Country :</span>{{city_country}}</h4>
+          <h4><span class="badge badge-primary">Wind :</span>{{wind}}</h4>
+          <h4><span class="badge badge-primary">Status :</span>{{status}}</h4>
+          <h4><span class="badge badge-primary">Clouds [x,y] :</span>{{cloud}}}</h4>
+          <h4><span class="badge badge-primary">Date [x,y] :</span>{{date}}}</h4>
+          <h4><span class="badge badge-primary">Temperature in Celsius :</span>{{temp}}</h4>
+          <h4><span class="badge badge-primary">Pressure :</span>{{pressure}}</h4>
+          <h4><span class="badge badge-primary">Humidity</span>{{humidity}}}</h4>
+          <h4><span class="badge badge-primary">Sea Level</span>{{sea_level}} </h4>
+          <h4><span class="badge badge-primary">Weather :</span>{{weather}}}</h4>
+          <h4><span class="badge badge-primary">Description</span>{{description}}</h4>
+          <h4><span class="badge badge-primary">Icon [x,y] :</span>{{icon}}}</h4>
+        </div>
+      </div>
+      {% endif %} 
+    </div>
+  </div>
